@@ -7,8 +7,27 @@ import Services from "./components/Services";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import './App.css'
+import { useEffect } from "react";
+import { getToken } from "firebase/messaging";
+import messaging from "./messaging";
 
 function App() {
+
+  useEffect(() => {
+  Notification.requestPermission().then((permission) => {
+    if (permission === "granted") {
+      getToken(messaging, {
+        vapidKey: "BN4gw9cIN44g9lRfyUP47IPvJE0h_JeaWUKHfoS2WmSXN9SP91jsMybw-n-l_xtF_BZcGuO7EdxbsUAH81QrztA",
+      })
+        .then((token) => {
+          console.log("FCM Token:", token);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  });
+}, []);
   return (
     <>
       <BrowserRouter>
