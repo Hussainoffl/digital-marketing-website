@@ -1,105 +1,70 @@
 function Blog() {
   return (
-    <section className="page">
-
-      <div className="blog-header">
-        <h1>Marketing Insights</h1>
-
-        <p>
-          Stay updated with the latest digital marketing trends,
-          SEO strategies, social media tips, and business growth hacks.
-        </p>
-      </div>
-
-      <div className="blog-grid">
-
-        <div className="blog-card">
-          <img
-            src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07"
-            alt="SEO"
-          />
-
-          <h2>10 SEO Tips for Better Rankings</h2>
-
+    <main className="page">
+      <section className="section blog-hero">
+        <div className="section-header reveal">
+          <span>Insights</span>
+          <h1>Marketing ideas, trends, and growth tactics for modern brands.</h1>
           <p>
-            Learn proven SEO techniques that can improve your
-            website visibility and drive organic traffic.
+            Explore our latest thinking on digital strategy, campaign performance,
+            and creative growth.
           </p>
         </div>
+      </section>
 
-        <div className="blog-card">
+      <section className="section blog-grid">
+        <article className="blog-card reveal reveal-delay-1">
           <img
-            src="https://images.unsplash.com/photo-1611162616475-46b635cb6868"
-            alt="Social Media"
+            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80"
+            alt="Marketing analytics"
+            loading="lazy"
           />
+          <div className="blog-card__content">
+            <span>Strategy</span>
+            <h3>How to build a marketing funnel that converts</h3>
+            <p>
+              Practical steps for designing campaigns that capture attention and
+              move leads through the buyer journey.
+            </p>
+            <button type="button" className="btn btn-text">Read article</button>
+          </div>
+        </article>
 
-          <h2>Social Media Trends in 2026</h2>
-
-          <p>
-            Discover how Instagram, Facebook, and LinkedIn
-            marketing are evolving this year.
-          </p>
-        </div>
-
-        <div className="blog-card">
+        <article className="blog-card reveal reveal-delay-2">
           <img
-            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4"
-            alt="Google Ads"
+            src="https://images.unsplash.com/photo-1496284045406-d3e0b918d7b4?auto=format&fit=crop&w=900&q=80"
+            alt="Social campaign"
+            loading="lazy"
           />
+          <div className="blog-card__content">
+            <span>Social</span>
+            <h3>Why creative storytelling outperforms awareness ads</h3>
+            <p>
+              Learn how strong messaging and design turn social impressions into
+              long-term brand interest.
+            </p>
+            <button type="button" className="btn btn-text">Read article</button>
+          </div>
+        </article>
 
-          <h2>How Google Ads Can Boost Sales</h2>
-
-          <p>
-            Understand how paid advertising can generate
-            quality leads and increase revenue.
-          </p>
-        </div>
-
-        <div className="blog-card">
+        <article className="blog-card reveal reveal-delay-3">
           <img
-            src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931"
-            alt="Content Marketing"
+            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=900&q=80"
+            alt="Search optimization"
+            loading="lazy"
           />
-
-          <h2>Content Marketing That Converts</h2>
-
-          <p>
-            Create valuable content that builds trust and
-            converts visitors into customers.
-          </p>
-        </div>
-
-        <div className="blog-card">
-          <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-            alt="Analytics"
-          />
-
-          <h2>Understanding Marketing Analytics</h2>
-
-          <p>
-            Learn how to measure campaign performance and
-            make data-driven business decisions.
-          </p>
-        </div>
-
-        <div className="blog-card">
-          <img
-            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
-            alt="Email Marketing"
-          />
-
-          <h2>Email Marketing Best Practices</h2>
-
-          <p>
-            Discover how effective email campaigns can
-            increase customer retention and sales.
-          </p>
-        </div>
-
-      </div>
-
-    </section>
+          <div className="blog-card__content">
+            <span>SEO</span>
+            <h3>Five optimization habits for faster search growth</h3>
+            <p>
+              A proven SEO workflow for improving rankings, content relevance, and
+              organic clicks.
+            </p>
+            <button type="button" className="btn btn-text">Read article</button>
+          </div>
+        </article>
+      </section>
+    </main>
   );
 }
 

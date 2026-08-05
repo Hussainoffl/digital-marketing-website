@@ -1,310 +1,95 @@
-// on click effect
-// import { useState } from "react";
+import { useState } from "react";
 
-// function Services() {
-//   const [activeCard, setActiveCard] = useState(null);
-
-//   const handleCardClick = (index) => {
-//     setActiveCard(activeCard === index ? null : index);
-//   };
-
-//   return (
-//     <section className="page">
-//       <div className="services-header">
-//         <h1>Our Services</h1>
-
-//         <p>
-//           We help businesses grow online with data-driven digital
-//           marketing strategies designed to increase traffic,
-//           generate leads, and boost sales.
-//         </p>
-//       </div>
-
-//       <div className="services-grid">
-
-//         {/* SEO */}
-//         <div
-//           className={`service-card ${activeCard === 0 ? "active" : ""}`}
-//           onClick={() => handleCardClick(0)}
-//         >
-//           <div className="card-inner">
-
-//             <div className="card-front">
-//               <h2>🔍 SEO Optimization</h2>
-//               <p>Click to view details</p>
-//             </div>
-
-//             <div className="card-back">
-//               <p>
-//                 Improve your website's visibility on search engines and
-//                 attract high-quality organic traffic.
-//               </p>
-
-//               <ul>
-//                 <li>Keyword Research</li>
-//                 <li>On-Page SEO</li>
-//                 <li>Technical SEO</li>
-//                 <li>Link Building</li>
-//               </ul>
-//             </div>
-
-//           </div>
-//         </div>
-
-//         {/* Social Media */}
-//         <div
-//           className={`service-card ${activeCard === 1 ? "active" : ""}`}
-//           onClick={() => handleCardClick(1)}
-//         >
-//           <div className="card-inner">
-
-//             <div className="card-front">
-//               <h2>📱 Social Media Marketing</h2>
-//               <p>Click to view details</p>
-//             </div>
-
-//             <div className="card-back">
-//               <p>
-//                 Build a strong brand presence and engage customers through
-//                 social media platforms.
-//               </p>
-
-//               <ul>
-//                 <li>Instagram Marketing</li>
-//                 <li>Facebook Campaigns</li>
-//                 <li>LinkedIn Growth</li>
-//                 <li>Content Creation</li>
-//               </ul>
-//             </div>
-
-//           </div>
-//         </div>
-
-//         {/* Google Ads */}
-//         <div
-//           className={`service-card ${activeCard === 2 ? "active" : ""}`}
-//           onClick={() => handleCardClick(2)}
-//         >
-//           <div className="card-inner">
-
-//             <div className="card-front">
-//               <h2>🎯 Google Ads</h2>
-//               <p>Click to view details</p>
-//             </div>
-
-//             <div className="card-back">
-//               <p>
-//                 Generate quality leads and maximize ROI through targeted
-//                 paid advertising campaigns.
-//               </p>
-
-//               <ul>
-//                 <li>Search Ads</li>
-//                 <li>Display Ads</li>
-//                 <li>Remarketing</li>
-//                 <li>Conversion Tracking</li>
-//               </ul>
-//             </div>
-
-//           </div>
-//         </div>
-//         {/* web development */}
-//         <div
-//           className={`service-card ${activeCard === 3 ? "active" : ""}`}
-//           onClick={() => handleCardClick(3)}
-//         >
-//           <div className="card-inner">
-
-//             <div className="card-front">
-//               <h2>🔍Web DEvelopment</h2>
-//               <p>Click to view details</p>
-//             </div>
-
-//             <div className="card-back">
-//               <p>
-//                 Create modern websites that provide excellent user
-//                 and drive conversions.
-//               </p>
-
-//               <ul>
-//                 <li>Responsive Design</li>
-//                 <li>React Development</li>
-//                 <li>Landing Pages</li>
-//                 <li>Performance Optimization</li>
-//               </ul>
-//             </div>
-
-//           </div>
-//         </div>
-
-//       </div>
-
-
-
-//     </section>
-//   );
-// }
-
-// export default Services;
-
+const services = [
+  {
+    title: "SEO Optimization",
+    icon: "🔍",
+    summary: "Rank higher and capture organic search demand.",
+    details: [
+      "Keyword research",
+      "Technical SEO",
+      "Content optimization",
+      "Link development",
+    ],
+  },
+  {
+    title: "Social Media Marketing",
+    icon: "📱",
+    summary: "Grow engagement and build a memorable social presence.",
+    details: [
+      "Creative campaigns",
+      "Community management",
+      "Paid social ads",
+      "Performance reporting",
+    ],
+  },
+  {
+    title: "Google Ads",
+    icon: "🎯",
+    summary: "Drive leads with conversion-driven PPC programs.",
+    details: [
+      "Search & display ads",
+      "Audience targeting",
+      "Budget optimization",
+      "Ad creative testing",
+    ],
+  },
+  {
+    title: "Web Development",
+    icon: "💻",
+    summary: "Launch responsive sites that convert and look premium.",
+    details: [
+      "Custom landing pages",
+      "UX-focused design",
+      "Performance tuning",
+      "CMS integration",
+    ],
+  },
+];
 
 function Services() {
+  const [activeCard, setActiveCard] = useState(null);
+
   return (
-    <section className="page">
-
-      <div className="services-header">
-        <h1>Our Services</h1>
-
-        <p>
-          We help businesses grow online with data-driven digital
-          marketing strategies designed to increase traffic,
-          generate leads, and boost sales.
-        </p>
-      </div>
-
-      <div className="services-grid">
-
-        {/* SEO */}
-        <div className="service-card">
-          <div className="card-inner">
-            <div className="card-front">
-              <h2>🔍 SEO Optimization</h2>
-            </div>
-
-            <div className="card-back">
-              <p>
-                Improve your website's visibility on search engines and
-                attract high-quality organic traffic.
-              </p>
-
-              <ul>
-                <li>Keyword Research</li>
-                <li>On-Page SEO</li>
-                <li>Technical SEO</li>
-                <li>Link Building</li>
-              </ul>
-            </div>
-          </div>
+    <main className="page">
+      <section className="section services-hero">
+        <div className="section-header reveal">
+          <span>Services</span>
+          <h1>Strategic services for digital growth and brand momentum.</h1>
+          <p>
+            We blend insight, creativity and technology to create campaigns that
+            attract customers and improve business performance.
+          </p>
         </div>
+      </section>
 
-        {/* Social Media */}
-        <div className="service-card">
-          <div className="card-inner">
-            <div className="card-front">
-              <h2>📱 Social Media Marketing</h2>
+      <section className="section services-grid">
+        {services.map((service, index) => (
+          <article
+            key={service.title}
+            className={`service-card reveal reveal-delay-${index + 1} ${activeCard === index ? "active" : ""}`}
+            onClick={() => setActiveCard(activeCard === index ? null : index)}
+          >
+            <div className="service-card__top">
+              <span className="service-icon">{service.icon}</span>
+              <h3>{service.title}</h3>
             </div>
+            <p>{service.summary}</p>
 
-            <div className="card-back">
-              <p>
-                Build a strong brand presence and engage customers through
-                social media platforms.
-              </p>
-
+            <div className="service-details">
               <ul>
-                <li>Instagram Marketing</li>
-                <li>Facebook Campaigns</li>
-                <li>LinkedIn Growth</li>
-                <li>Content Creation</li>
+                {service.details.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
+              <button type="button" className="btn btn-text">
+                Learn more
+              </button>
             </div>
-          </div>
-        </div>
-
-        {/* Google Ads */}
-        <div className="service-card">
-          <div className="card-inner">
-            <div className="card-front">
-              <h2>🎯 Google Ads</h2>
-            </div>
-
-            <div className="card-back">
-              <p>
-                Generate quality leads and maximize ROI through targeted
-                paid advertising campaigns.
-              </p>
-
-              <ul>
-                <li>Search Ads</li>
-                <li>Display Ads</li>
-                <li>Remarketing</li>
-                <li>Conversion Tracking</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Web Development */}
-        <div className="service-card">
-          <div className="card-inner">
-            <div className="card-front">
-              <h2>💻 Web Development</h2>
-            </div>
-
-            <div className="card-back">
-              <p>
-                Create modern websites that provide excellent user
-                experience and drive conversions.
-              </p>
-
-              <ul>
-                <li>Responsive Design</li>
-                <li>React Development</li>
-                <li>Landing Pages</li>
-                <li>Performance Optimization</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Content Marketing */}
-        <div className="service-card">
-          <div className="card-inner">
-            <div className="card-front">
-              <h2>✍️ Content Marketing</h2>
-            </div>
-
-            <div className="card-back">
-              <p>
-                Create valuable content that attracts, engages,
-                and converts potential customers.
-              </p>
-
-              <ul>
-                <li>Blog Writing</li>
-                <li>Copywriting</li>
-                <li>Email Marketing</li>
-                <li>Content Strategy</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Analytics */}
-        <div className="service-card">
-          <div className="card-inner">
-            <div className="card-front">
-              <h2>📊 Analytics & Reporting</h2>
-            </div>
-
-            <div className="card-back">
-              <p>
-                Track campaign performance and make smarter business
-                decisions using real-time data.
-              </p>
-
-              <ul>
-                <li>Google Analytics</li>
-                <li>Performance Reports</li>
-                <li>Conversion Analysis</li>
-                <li>ROI Tracking</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
+          </article>
+        ))}
+      </section>
+    </main>
   );
 }
 
